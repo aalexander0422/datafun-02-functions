@@ -1,0 +1,9 @@
+#Mean = 99.12
+#Median = 102.5
+#Mode = 111
+#variance = 179.25061224489795
+#Standard deviation = 13.388450703681062
+#Slope = 2.7762237762237763
+#Intercept = 3.121212121212121
+#at Future y = 13
+#We predict the value of x will be = 39

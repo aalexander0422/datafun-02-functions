@@ -77,12 +77,13 @@ class Species(Enum):
 class PyBuddy:
     """ PyBuddy class for creating a study buddy."""
 
-    def __init__(self, name, species, num_legs, weight_kgs, is_available, skill_list):
+    def __init__(self, name, species, num_legs, height_Feet, weight_kgs, is_available, skill_list):
         """ Built-in method to create a new instance."""
         self.name = name
         self.species = species
         self.num_legs = num_legs
         self.weight_kgs = weight_kgs
+        self.height_feet = height_Feet
         self.is_available = is_available
         self.skill_list = skill_list
         self.create_date = datetime.datetime.now()
@@ -92,7 +93,8 @@ class PyBuddy:
         s0 = f"I'm {self.name}.\n"
         s1 = f"I'm a {self.species} with {self.num_legs} legs.\n"
         s2 = f"I weigh {self.weight_kgs:.2f} kgs.\n"
-        s3 = f"I've been alive for {self.get_age_string()}.\n"
+        s3 = f"I am {self.height_feet} feet tall.\n"
+        s4 = f"I've been alive for {self.get_age_string()}.\n"
 
         if self.is_available:
             s4 = "I'm available for tutoring.\n"
@@ -122,7 +124,15 @@ class PyBuddy:
         # print using our built-in to string method
         print(self.__str__())
 
-        final_message = """
+    def add_three(first, second, third):
+            sum = first + second + third
+            return sum
+
+    def important_info(self):
+            print()
+            print(f"Did you know I can add! 234 + 689 + 780 = {add_three(234, 689, 780)}")
+
+final_message = """
 
         You'll need curiousity, the ability to search the web,
         and the tenacity and resourcefulness
@@ -131,7 +141,7 @@ class PyBuddy:
         Let's get started!
 
         """
-        print(final_message)
+    
 
 
 # -------------------------------------------------------------
@@ -141,17 +151,10 @@ class PyBuddy:
 
 if __name__ == "__main__":
     # Create an instance of a PyBuddy
-    alice = PyBuddy(
-        "Alice",
-        Species.CAT,
-        4,
-        8.123456,
-        True,
-        ["Git", "GitHub", "Python", "Markdown", "VS Code"],
-    )
+   
 
     # Call the buddy's welcome() method
-    alice.display_welcome()
+   
 
 
     # Create another instance of a PyBuddy
@@ -160,9 +163,12 @@ if __name__ == "__main__":
         name="Rex",
         species=Species.DOG,
         num_legs=4,
+        height_Feet= 3,
         weight_kgs=10.437241,
         is_available=True,
-        skill_list=["Git", "GitHub", "Python", "Markdown", "VS Code"],
+        skill_list=["Git", "GitHub", "Python", "Markdown", "VS Code", "and stats"],
     )
 
     rex.display_welcome()
+
+    print(final_message)

@@ -35,13 +35,7 @@ def get_area_of_lot(length, width):
 
 
 # define more functions here (see instuctions)
-reps = input('Enter number of reps')
-weight = input('Enter the weight you lifted')
-setone = input(" total Weight on set one")
-settwo = input('Enter total weight set two')
-setthree = input("Enter total weight set three")
-Highestset = input('Input your highest set')
-lowestset = input('Input your lowest set')
+
 
 def total_pounds_lifted(reps, weight): 
     # returns total pounds lifted per set
@@ -50,7 +44,7 @@ def total_pounds_lifted(reps, weight):
 
 def sum_of_pounds(setone, settwo, setthree):
     # returns the sum of pounds
-    sumpounds = math.fsum(setone,settwo,setthree) 
+    sumpounds = math.fsum([setone,settwo,setthree]) 
     return sumpounds
 def range_of_sets(Highestset, Lowestset):
     # Returns the range of the set 
@@ -72,4 +66,7 @@ if __name__ == "__main__":
     print()
     print(f"math.comb(5,1) = {math.comb(5,1)}")
     print(f"math.perm(5,1) = {math.perm(5,1)}")
-    print(get_area_of_lot(6,2))
+    print(f"get area of lot(6,2) = {get_area_of_lot(6,2)}")
+    print(f"total pounds(14,12) = {total_pounds_lifted(14,12)}")
+    print(f"Sum of pounds(14,12,14) = {sum_of_pounds(14,12,14)}")
+    print(f"Range of sets(22, 14) = {range_of_sets(22,14)}")

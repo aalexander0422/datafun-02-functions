@@ -1,4 +1,5 @@
 """
+Ashlee Alexander 1/20/23 , domain is weight lifting
 Build a PyBuddy to illustrate Python skills.
 
 Overview:

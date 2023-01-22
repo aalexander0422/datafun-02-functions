@@ -78,3 +78,23 @@ scores = [
 # y is dependent on x (e.g. temperature vs hour of day)
 x_times = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
 y_temps = [2, 5, 8, 20, 21, 23, 24, 27, 30, 31, 31,32]
+
+mean = statistics.mean(scores)
+median = statistics.median(scores)
+mode = statistics.mode(scores)
+var = statistics.variance(scores)
+stdev = statistics.stdev(scores)
+
+slope, intercept = statistics.linear_regression(x_times, y_temps)
+future_y = 13 
+future_x = round(slope * future_y + intercept)
+
+print(f"Mean = {mean:0.2f}")
+print(f"Median = {median:0.2f}")
+print(f"Mode = {mode:0.2f}")
+print(f"variance = {var:0.2f}")
+print(f"Standard deviation = {stdev:0.2f}")
+print(f"Slope = {slope:0.2f}")
+print(f"Intercept = {intercept:0.2f}")
+print(f"at Future y = {future_y:0.2f}")
+print(f"We predict the value of x will be = {future_x:0.2f}")
